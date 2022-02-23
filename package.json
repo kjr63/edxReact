@@ -1,0 +1,44 @@
+{
+    "name": "edxReact",
+    "version": "1.0.0",
+    "keywords": [
+        "util",
+        "functional",
+        "server",
+        "client",
+        "browser"
+    ],
+    "main": "index.js",
+    "scripts": {
+        "watch:sass": "node-sass public_html/sass/main.scss public_html/css/style.css -w",
+        "compile:sass": "node-sass public_html/sass/main.scss public_html/css/style.comp.css",
+        "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" public_html/css/style.comp.css -o public_html/css/style.prefix.css",
+        "compress:css": "node-sass public_html/css/style.prefix.css public_html/css/style.css --output-style compressed",
+        "build:js": "babel public_html/jsx --presets babel-preset-env,babel-preset-react --out-dir public_html/js",
+        "build:css": "npm-run-all compile:sass prefix:css compress:css",
+        "build:wp": "webpack"
+    },
+    "author": "risberg",
+    "contributors": [],
+    "dependencies": {
+        "babel-core": "6.26.3",
+        "babel-loader": "7.1.5",
+        "react": "16.12.0",
+        "react-dom": "16.12.0",
+        "react-redux": "7.2.0",
+        "react-router-dom": "5.1.2",
+        "sass-loader": "8.0.2",
+        "webpack": "4.41.5",
+        "webpack-cli": "3.3.10"
+    },
+    "devDependencies": {
+        "autoprefixer": "9.7.1",
+        "babel-cli": "6.26.0",
+        "babel-preset-env": "1.7.0",
+        "babel-preset-react": "6.24.1",
+        "concat": "1.0.3",
+        "node-sass": "4.13.0",
+        "npm-run-all": "4.1.5",
+        "postcss-cli": "6.1.3"
+    }
+}
