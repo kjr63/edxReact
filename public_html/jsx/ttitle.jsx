@@ -1,4 +1,4 @@
-function TransportingTitle(props){
+export default function TransportingTitle(props) {
     return (
         <div>
             <h2>Welcome to React Transportation</h2>

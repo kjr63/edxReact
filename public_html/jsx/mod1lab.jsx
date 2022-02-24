@@ -1,3 +1,4 @@
+import  TransportingTitle  from "ttitle.jsx";
 
 function ListItem(props){
     return (
@@ -79,7 +80,3 @@ function TransportingApp(props){
     )
 }
 
-ReactDOM.render(
-    <TransportingApp />,
-    document.getElementById("root")
-)
