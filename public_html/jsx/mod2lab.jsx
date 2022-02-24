@@ -88,7 +88,7 @@ class ResultBlock  extends React.Component {
     }     
 }
 
-class TriviaApp extends React.Component {
+export default class TriviaApp extends React.Component {
     constructor(props){
         super(props);
         this.triviaIndex = 0;
@@ -144,7 +144,3 @@ class TriviaApp extends React.Component {
     }    
 }
 
-ReactDOM.render(
-    <TriviaApp />,
-    document.getElementById("root")
-)

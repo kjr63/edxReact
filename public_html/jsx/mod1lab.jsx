@@ -1,4 +1,4 @@
-import  TransportingTitle  from "ttitle.jsx";
+import  TransportingTitle  from "./ttitle.jsx";
 
 function ListItem(props){
     return (
@@ -57,7 +57,7 @@ function ConvertiblesList(props){
         </div>
     )
 }
-function TransportingApp(props){
+export default function TransportingApp(props){
     return (
         <div>
             <TransportingTitle/>
